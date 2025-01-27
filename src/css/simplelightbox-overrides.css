@@ -1,0 +1,25 @@
+.sl-wrapper {
+  background-color: rgba(46, 47, 66, 0.8);
+}
+
+.sl-wrapper .sl-counter,
+.sl-counter span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.sl-image {
+  width: 1112px;
+  height: 640px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.sl-wrapper .sl-close,
+.sl-wrapper .sl-navigation button {
+  color: white;
+}
