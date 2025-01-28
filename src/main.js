@@ -32,6 +32,10 @@ function handleFormSubmit(event) {
     return;
   }
 
+  if (query === lastQuery) {
+    return;
+  }
+
   gallery.innerHTML = '';
   lastQuery = query;
   currentPage = 1;
