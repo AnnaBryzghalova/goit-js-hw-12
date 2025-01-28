@@ -1,4 +1,4 @@
-const PER_PAGE = 12;
+const PER_PAGE = 15;
 
 const gallery = document.querySelector('ul.gallery');
 const loadingMessage = document.querySelector('.loading-message');
@@ -68,6 +68,10 @@ async function loadImages(query, page) {
     } else {
       setNextPageButtonVisible(true);
     }
+
+    if (page > 1) {
+      scrollByNImages(2);
+    }
   } catch (error) {
     showError(error.message);
   } finally {
@@ -95,4 +99,19 @@ function setNextPageButtonVisible(visible) {
   } else {
     nextPageBtn.classList.add('hidden');
   }
+}
+
+function scrollByNImages(imagesNum) {
+  const firstImage = document.querySelector('.gallery-item');
+  if (firstImage == null) {
+    return;
+  }
+
+  const imageHeight = firstImage.getBoundingClientRect()['height'];
+  console.log(imageHeight);
+
+  window.scrollBy({
+    top: imageHeight * imagesNum,
+    behavior: 'smooth',
+  });
 }

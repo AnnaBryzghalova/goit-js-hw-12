@@ -10,7 +10,7 @@ const defaultParams = {
   safesearch: true,
 };
 
-export async function fetchImagesData(searchQuery, page = 1, per_page = 12) {
+export async function fetchImagesData(searchQuery, page = 1, per_page = 15) {
   const response = await axios.get('/api/', {
     params: {
       q: searchQuery,
