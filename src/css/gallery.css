@@ -3,7 +3,7 @@
 }
 
 .gallery {
-  margin: auto;
+  margin: 32px auto;
   padding: 0;
   display: flex;
   flex-wrap: wrap;

@@ -6,7 +6,16 @@ const commonOptions = {
 
 import iziToast from 'izitoast';
 
-export function showMessage(message) {
+export function showInfo(message) {
+  iziToast.info({
+    message,
+    progressBarColor: '#0071BD',
+    title: 'Info',
+    ...commonOptions,
+  });
+}
+
+export function showSuccess(message) {
   iziToast.success({
     message,
     progressBarColor: '#007E33',

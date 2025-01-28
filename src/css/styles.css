@@ -15,3 +15,10 @@
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
+
+.center {
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
